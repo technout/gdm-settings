@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/home/user/python/installed/gdm-settings/usr/local/lib/python3.11/site-packages/gdms/utils.py", line 158, in <lambda>
+    finish_callback = lambda self, task, nothing: self.finish_callback()
+                                                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/python/installed/gdm-settings/usr/local/lib/python3.11/site-packages/gdms/gui/window.py", line 136, in on_apply_finished
+    if self.apply_task.finish():
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/python/installed/gdm-settings/usr/local/lib/python3.11/site-packages/gdms/utils.py", line 183, in finish
+    raise value
+  File "/home/user/python/installed/gdm-settings/usr/local/lib/python3.11/site-packages/gdms/utils.py", line 168, in _thread_cb
+    retval = self.function()
+             ^^^^^^^^^^^^^^^
+  File "/home/user/python/installed/gdm-settings/usr/local/lib/python3.11/site-packages/gdms/settings.py", line 576, in apply
+    _gresource_apply()
+  File "/home/user/python/installed/gdm-settings/usr/local/lib/python3.11/site-packages/gdms/settings.py", line 357, in _gresource_apply
+    compiled_file = gresource.compile(shelldir,
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/python/installed/gdm-settings/usr/local/lib/python3.11/site-packages/gdms/gresource.py", line 99, in compile
+    extract_default_theme(temp_theme_dir)
+  File "/home/user/python/installed/gdm-settings/usr/local/lib/python3.11/site-packages/gdms/gresource.py", line 67, in extract_default_theme
+    resource_list = utils.get_stdout(["gresource", "list", env.HOST_ROOT + gresource_file]).splitlines()
+                                                           ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+TypeError: can only concatenate str (not "NoneType") to str
+
